@@ -24,3 +24,35 @@ https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-th
 **Hello World test**
 * `python app.py`
 * lunch to `http://localhost:5000/`
+
+## API Endpoints
+### Get
+| Feature | Address | Parameters | Response | Privacy |
+| --- | --- | --- | --- | --- |
+| **Search** | `/get/search` | | | Public |
+| **Get Transcription** | `/get/trans` | | | Public |
+| **Get Tags** | `/get/tags` | | | Public |
+| **Get Host** | `/get/podcast/host` | | | Public |
+| *Get Copyright* | `/get/podcast/copyright` | | | Public |
+| *Get Name* | `/get/podcast/name` | | | Public |
+| *Get Email* | `/get/podcast/email` | | | Public |
+| **Get Episodes** | `/get/podcast/episodes` | | | Public |
+| **Get Episode** | `/get/episode` | | | Public |
+| **Get Description** | `/get/episode/description` | | | Public |
+| **Get Duration** | `/get/episode/duration` | | | Public |
+| **Get Publication Date** | `/get/episode/pub` | | | Public |
+| **Get Image** | `/get/episode/image` | | | Public |
+| **Get MP3** | `/get/episode/mp3` | | | Public |
+| **Get Show Notes** | `/get/episode/show_notes` | | | Public |
+
+### Set
+| Feature | Address | Parameters | Response | Privacy |
+| --- | --- | --- | --- | --- |
+| **Set Tags** | `/set/tags` | | | Private |
+| **Add Tags** | `/set/tags/add` | | | Private |
+
+
+
+
+## Database Fields
+
