@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 app = Flask(__name__)
 
 
@@ -16,19 +16,10 @@ def default():
 '''
 TODO
 '''
-@app.route('/search/<keywords>')
-def search(keywords):
-	'''
-	Format for keywords is flexible so long as you specify the keyword delimiter 
-	that's passed in the http request
-	In published API, should specify and set the delimiter as a constant
-
-	Returns a dictionary in the format {'keywords': ['list', 'of', 'keywords']}
-
-	FOR LATER: Going to run into a problem with searching for phrases....
-	'''
-	keywords_dict = parse_keywords_for_db(keywords, keywords_delimiter=';')
-	return keywords_dict
+@app.route('/search')
+def search():
+	# URL formatted as /search?keywords=['kw1','kw2'] --> returns the list of keywords
+	return request.args.get('keywords')
 
 
 ################################################################################
@@ -169,17 +160,6 @@ def add_tags():
 	raise NotImplemented
 	return -1
 
-
-################################################################################
-# FUNCTIONS FOR DEALING WITH DB 
-################################################################################
-
-def parse_keywords_for_db(keywords, keywords_delimiter):
-	assert 'keywords=' in keywords, 'Keywords not found in HTTP request'
-	values = keywords.split('=')[1]
-	keywords_dict = {}
-	keywords_dict['keywords'] = [word for word in values.split(keywords_delimiter)]
-	return keywords_dict
 
 
 if __name__ == '__main__':
