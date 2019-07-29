@@ -33,7 +33,7 @@ https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-th
 | **Set Tags** | `/set/tags` | | | Private |
 | **Add Tags** | `/set/tags/add` | | | Private |
 | **Get Tags** | `/get/tags` | | | Public |
-| **Show Notes** | `/get/shownotes` | | | Public |
+| **Show Notes** | `/get/show_notes` | | | Public |
 | **Get Host** | `/get/podcast/host` | | | Public |
 | *Get Copyright* | `/get/podcast/copyright` | | | Public |
 | *Get Name* | `/get/podcast/name` | | | Public |
