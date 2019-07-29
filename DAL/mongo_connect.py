@@ -9,6 +9,12 @@ podcasts_col = db.podcasts
 
 # returning range of podcast the answering the query
 def get_podcasts_by_keyword(keywork):
-    return podcasts_col.find({'$text': {'$search': keywork}})
-
+    keywork = ".*"+keywork+".*"
+    # yield podcasts_col.find({'$text': {'$search': keywork}})
+    # # yield podcasts_col.find( { "episodes": { '$or': [ { title: keywork }, { desc: keywork } ] } )
+    # yield podcasts_col.find( { "episodes": { '$or' : [ { 'title': keywork }, { 'desc': keywork } ] }})
+    return podcasts_col.find( {"$or":[{ 'episodes.title':  {'$regex': keywork}},
+                                      { 'episodes.desc':  {'$regex': keywork}},
+                                      { 'desc':  {'$regex': keywork}},
+                                      { 'name':  {'$regex': keywork}}] })
 
