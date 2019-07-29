@@ -6,7 +6,7 @@ def insert_podcast(rssfeed):
 
     client = pymongo.MongoClient(
         "mongodb+srv://karin:Afeq1012"
-        "@cluster0-ub2ti.mongodb.net/test?retryWrites=true&w=majority")
+        "@cluster0-ub2ti.mongodb.net/ink?retryWrites=true&w=majority")
     db = client.test
     mycol = db['podcasts']
     if not 'title' in d['feed']:
@@ -19,7 +19,7 @@ def insert_podcast(rssfeed):
         temp_pod = {'name': d['feed']['title'],
                     'author': d['feed']['author'],
                     'desc': d['feed']['description'],
-                    'episods': [
+                    'episodes': [
                         {'link': d['entries'][i]['link'], 'title': d['entries'][i]['title'],
                          'desc': d['entries'][i]['description']} for i in range(min(10,len(d['entries'])))]}
         mycol.insert_one(temp_pod)
