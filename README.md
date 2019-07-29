@@ -4,6 +4,7 @@ Hey! Welcome to INK github library! <br>
 Glad you're with us :)
 
 SET UP - **let's be on the same page**
+knowledge base - https://github.com/karinlah/inkPodcast/wiki
 
 `git clone with SSH git@github.com:karinlah/inkPodcast.git`
 

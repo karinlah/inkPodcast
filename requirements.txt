@@ -1,1 +1,2 @@
 Flask==0.10.1
+pymongo[tls,srv]==3.8.0
