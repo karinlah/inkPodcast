@@ -7,19 +7,21 @@ def hello():
     return "Hello World!"
 
 
-@app.route('/')
-def hello():
+# searching in title, descritopn and tras
+@app.route('/smart_search')
+def smart_search():
     return "Hello World!"
 
 
-@app.route('/')
-def hello():
+@app.route('/tags/get')
+def get_tags():
     return "Hello World!"
 
 
-@app.route('/')
-def hello():
+@app.route('/tags/add')
+def add_tags():
     return "Hello World!"
+
 
 if __name__ == '__main__':
     app.run()
