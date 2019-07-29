@@ -1,6 +1,6 @@
 # inkPodcast
 
-Hey! Welcome to INK github library!
+Hey! Welcome to INK github library! <br>
 Glad you're with us :)
 
 SET UP - **let's be on the same page**
