@@ -30,7 +30,8 @@ https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-th
 | --- | --- | --- | --- | --- |
 | **Search** | `/search` | | | Public |
 | **Transcription** | `/get/trans` | | | Public |
-| **Add Tags** | `/add/tags` | | | Private |
+| **Set Tags** | `/set/tags` | | | Private |
+| **Add Tags** | `/set/tags/add` | | | Private |
 | **Get Tags** | `/get/tags` | | | Public |
 | **Show Notes** | `/get/shownotes` | | | Public |
 
