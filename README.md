@@ -23,3 +23,16 @@ https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-th
 **Hello World test**
 * `python app.py`
 * lunch to `http://localhost:5000/`
+
+## API Endpoints
+
+| Feature | Address | Inputs | Outputs | Privacy |
+| --- | --- | --- | --- | --- |
+| **Search** | `/search` | | | Public |
+| **Transcription** | `/get/trans` | | | Public |
+| **Add Tags** | `/add/tags` | | | Private |
+| **Get Tags** | `/get/tags` | | | Public |
+| **Show Notes** | `/get/shownotes` | | | Public |
+
+## Database Fields
+
