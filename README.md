@@ -23,3 +23,31 @@ https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-th
 **Hello World test**
 * `python app.py`
 * lunch to `http://localhost:5000/`
+
+## API Endpoints
+
+| Feature | Address | Inputs | Outputs | Privacy |
+| --- | --- | --- | --- | --- |
+| **Search** | `/search` | | | Public |
+| **Transcription** | `/get/trans` | | | Public |
+| **Set Tags** | `/set/tags` | | | Private |
+| **Add Tags** | `/set/tags/add` | | | Private |
+| **Get Tags** | `/get/tags` | | | Public |
+| **Show Notes** | `/get/show_notes` | | | Public |
+| **Get Host** | `/get/podcast/host` | | | Public |
+| *Get Copyright* | `/get/podcast/copyright` | | | Public |
+| *Get Name* | `/get/podcast/name` | | | Public |
+| *Get Email* | `/get/podcast/email` | | | Public |
+| **Get Episodes** | `/get/podcast/episodes` | | | Public |
+| **Get Description** | `/get/episode/description` | | | Public |
+| **Get Episode** | `/get/episode` | | | Public |
+| **Get Duration** | `/get/episode/duration` | | | Public |
+| **Get Publication Date** | `/get/episode/pub` | | | Public |
+| **Get Image** | `/get/episode/image` | | | Public |
+| **Get MP3** | `/get/episode/mp3` | | | Public |
+
+
+
+
+## Database Fields
+
