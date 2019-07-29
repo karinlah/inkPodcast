@@ -46,8 +46,8 @@ def get_tags():
 '''
 TODO
 '''
-@app.route('/get/show_notes')
-def get_show_notes():
+@app.route('/get/episode/show_notes')
+def get_episode_show_notes():
 	raise NotImplemented
 	return -1
 
