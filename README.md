@@ -16,3 +16,10 @@ https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-th
 - pull from master `git pull origin master`
 - create you own branch `git checkout -b [name_of_your_new_branch]`
 - after checking, push your branch `git push origin [name_of_your_new_branch]`
+
+**install requirements**
+`pip3 install -r requirements.txt`
+
+**Hello World test**
+* `python app.py`
+* lunch to `http://localhost:5000/`
