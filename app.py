@@ -1,4 +1,6 @@
+from bson.json_util import dumps
 from flask import Flask, request
+from DAL.mongo_connect import get_podcasts_by_keyword
 app = Flask(__name__)
 
 
@@ -18,9 +20,15 @@ TODO
 '''
 @app.route('/search')
 def search():
-	# URL formatted as /search?keywords=['kw1','kw2'] --> returns the list of keywords
-	return request.args.get('keywords')
-
+	# URL formatted as /search?keywords=kw1,kw2 --> returns the list of keywords
+	keyword = request.args.get('keyword') 
+	if not keyword:
+		raise Exception('No keyword found, ending search')
+		return ''
+	data = ''
+	for item in get_podcasts_by_keyword(keyword):
+		data += dumps(item)
+	return data
 
 ################################################################################
 # GET
