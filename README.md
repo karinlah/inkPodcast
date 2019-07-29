@@ -1,7 +1,7 @@
 # inkPodcast
 
 Hey! Welcome to INK github library!
-Glad you with us :)
+Glad you're with us :)
 
 SET UP - **let's be on the same page**
 
