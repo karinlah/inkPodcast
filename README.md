@@ -27,32 +27,23 @@ https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-th
 
 ## API Endpoints
 ### Get
-| Feature | Address | Parameters | Response | Privacy |
-| --- | --- | --- | --- | --- |
-| **Search** | `/get/search` | | | Public |
-| **Get Transcription** | `/get/trans` | | | Public |
-| **Get Tags** | `/get/tags` | | | Public |
-| **Get Host** | `/get/podcast/host` | | | Public |
-| *Get Copyright* | `/get/podcast/copyright` | | | Public |
-| *Get Name* | `/get/podcast/name` | | | Public |
-| *Get Email* | `/get/podcast/email` | | | Public |
-| **Get Episodes** | `/get/podcast/episodes` | | | Public |
-| **Get Episode** | `/get/episode` | | | Public |
-| **Get Description** | `/get/episode/description` | | | Public |
-| **Get Duration** | `/get/episode/duration` | | | Public |
-| **Get Publication Date** | `/get/episode/pub` | | | Public |
-| **Get Image** | `/get/episode/image` | | | Public |
-| **Get MP3** | `/get/episode/mp3` | | | Public |
-| **Get Show Notes** | `/get/episode/show_notes` | | | Public |
+
+#### Cross Podcasts
+| Feature | Address | Parameters | Response |
+| --- | --- | --- | --- |
+| **Search** | `/get/search/all` |keyword | JSON of podcast episodes links and data|
+| **Search** | `/get/search/podcast` | podcast name | JSON of podcast episodes links and data |
+
+#### Per Podcast
+| Feature | Address | Parameters | Response |
+| --- | --- | --- | --- |
+| **Get content table** | `/get/podcast/content` | podcast name & episode / link to an audio file| JSON with table content |
+| **Get INKed MP3** | `/get/podcast/inked` | podcast name, episode / link to an audio file| link to episode, populated with ads|
+| **Get Transcription** | `/get/podcast/trans` | podcast name, episode| Summarize transcription of the episode |
+| **Get Tags** | `/get/podcast/tags` | podcast name, episode | list of tag|
+| **Get Show Notes** | `/get/episode/show_notes` | podcast name, episode / link to an audio file | JSON of show notes |
 
 ### Set
-| Feature | Address | Parameters | Response | Privacy |
-| --- | --- | --- | --- | --- |
-| **Set Tags** | `/set/tags` | | | Private |
-| **Add Tags** | `/set/tags/add` | | | Private |
-
-
-
-
-## Database Fields
-
+| Feature | Address | Parameters | Response |
+| --- | --- | --- | --- |
+| **Add Tags** | `/podcast/set/tags/add` | podcast, episode, tag| result status |
