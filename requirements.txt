@@ -3,4 +3,6 @@ pymongo[tls,srv]==3.8.0
 bson==0.5.8
 pymongo==3.8.0
 dnspython==1.16.0
+pydub==0.23.1
+SpeechRecognition==3.8.1
 
